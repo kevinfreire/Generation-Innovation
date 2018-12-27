@@ -7,7 +7,7 @@
 **********************************/
 
 @import "normalize.css"; // clears all border, padding, etc.
-@import "responsive.scss";
+// @import "responsive";
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
 input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
@@ -143,6 +143,9 @@ $all-ease-in: all ease-in 0.3s;
 
 /* Background Images */
 $rockyTO: url('../images/rockyshoretoronto.jpg');
+$seminar: url('../images/techmeeting.jpg');
+$mentor: url('../images/mentorship.jpg');
+$community: url('../images/torontobuilding.jpg');
 
 
 /**********************************
@@ -231,10 +234,22 @@ p a {
 
 /* Thematic Clip Paths */
 .pentagon-right { // keeping this clip-path separate in case I want to resue it for other pieces of content later
-  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 73%, 44% 100%, 0 60%);
-  clip-path: polygon(25% 0, 100% 0, 100% 73%, 44% 100%, 0 60%);
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 73%, 50% 95%, 0 50%);
+  clip-path: polygon(20% 0, 100% 0, 100% 73%, 50% 95%, 0 50%);
 }
 
+/* Thematic Clip Paths */
+.pentagon-left { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+  -webkit-clip-path: polygon(0 15%, 35% 0, 65% 50%, 50% 100%, 0 90%);
+  clip-path: polygon(0 15%, 35% 0, 65% 50%, 50% 100%, 0 90%);
+  background-color: $primary-color;
+}
+
+.square {
+// keeping this clip-path separate in case I want to resue it for other pieces of content later
+  -webkit-clip-path: polygon(10% 10%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+}
 
 /**********************************
 /* NAVBAR
@@ -324,43 +339,6 @@ nav {
 /* SECTION: HERO (TOP)
 **********************************/
 
-// .video-container {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// }
-
-// .color-overlay {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	background-color: $primary-color;
-// 	width: 100%;
-// 	height: 100vh;
-// 	opacity: 0.4;
-// }
-
-// .hero-image {
-//   width: 80%;
-//   height: 100%;
-//   position: relative;
-//   right: 0;
-//   top: 0;
-
-  // img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: none;
-  //   object-position: 40% 5%;
-  // }
-
-  // svg {
-  //   position: absolute;
-  //   bottom: 0;
-  // }
-// }
-
 .hero-image {
   height: 50vw;
   width: 50vw;
@@ -392,10 +370,6 @@ nav {
   padding-left: 10%;
   padding-right: 5%;
   max-width: 55vw;
-  // padding: 20px;
-  // margin: 15px;
-  // z-index: 1; // this doesn't matter without a position value given
-  // opacity: 0.8;
 
   h1 {
     color: $primary-color;
@@ -419,16 +393,36 @@ nav {
 
 }
 
+.hero-signup {
+  width: 100%;
+}
+
+.hero-signup-wrapper {
+  width: 25%;
+  margin-left: 10%;
+}
+
+#hero-signup {
+  background-color: $secondary-color;
+  border: none;
+  color: $light-text-color;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 /**********************************
 /* SECTION: ABOUT
 **********************************/
 
 .about {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   max-width: 100vw;
   margin: 0 auto;
-  background-color: $primary-color;
-  height: 100vh;
+  height: 100%;
 }
 
 .about-content {
@@ -436,7 +430,7 @@ nav {
 }
 
 .about-content h1 {
-  padding-top: 25%;
+  // padding-top: 9%;
   padding-left: 2.5vw;
   color: $secondary-color;
   font-family: $header-font;
@@ -458,16 +452,9 @@ nav {
 }
 
 .about-content span {
-	text-transform: uppercase;
-	font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-
-.about svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 
 /**********************************
 /* SECTION: EVENTS
@@ -476,11 +463,13 @@ nav {
 .events {
   max-width: 100%;
   background: $primary-color;
+  padding-bottom: 25px;
 }
 
 .events-wrapper {
-	width: 90%;
-	margin: 0 auto;
+  // width: 90%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .events-leed {
@@ -506,16 +495,43 @@ nav {
   }
 }
 
-
 article {
-	background: $primary-color;
-	width: calc((100% - 30px) / 2);
-	margin-right: 30px;
-	float: left;
+  background: $primary-color;
+  width: 100%;
 }
 
-.events-info article:nth-of-type(2) {
-	margin-right: 0;
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.carousel {
+  /*background: #EEE;*/
+}
+
+.carousel-cell {
+  width: 49%;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
 }
 
 .event-header {
@@ -549,9 +565,23 @@ article {
 }
 
 .event-content p {
-	color: #fff;
+  color: #fff;
 }
 
+.save-spot {
+  background: $minor-color;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px 0px 5px 0px;
+
+  p {
+    color: $primary-color;
+    font-family: $body-font;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
 
 /**********************************
 /* THIS IS FOR THE SKEWED SECTION
@@ -569,8 +599,6 @@ article {
   background-attachment:fixed;
 }
 
-// linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)) ,
-
 .skewedSection-vision {
   background: url(../images/light.jpg);
   background-position: center top;
@@ -581,32 +609,52 @@ article {
 
 .skewedSection-title {
   font-family: $header-font;
-}
-
-.skewedSection-contentWrapper {
-  padding-top: 250px;
-  padding-bottom: 325px;
-  min-height: 160px;
-  vertical-align: middle;
-}
-
-.skewedSection-title {
   font-size: 30px;
   line-height: 1.2;
   color: #fff;
 }
 
+.skewedSection-contentWrapper {
+  padding-top: 210px;
+  padding-bottom: 245px;
+  min-height: 160px;
+  vertical-align: middle;
+}
+
+.skewed-container {
+  max-width: 1060px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+// .skewedSection-title-events {
+//   font-size: 4.5rem;
+//   text-transform: uppercase;
+//   line-height: 1.2;
+//   color: $primary-color;
+//   -webkit-transform: rotate(5.5deg) translate(10%, 285%);
+//   transform: rotate(5.5deg) translate(10%, 285%);
+// }
+
+// .skewedSection-contentWrapper-events {
+//   padding-top: 50px;
+//   padding-bottom: 245px;
+//   // min-height: 160px;
+//   // vertical-align: middle;
+// }
+
+// .skewedSection-title {
+//   font-size: 30px;
+//   line-height: 1.2;
+//   color: #fff;
+// }
+
 .skewedSection-SVGTopW {
   position: absolute;
-  fill: #fff;
+  fill: $light-accent-color;
 }
 
 .skewedSection-SVGTopW-vision {
-  position: absolute;
-  fill: $primary-color;
-}
-
-.skewedSection-SVGTopW-logo {
   position: absolute;
   fill: $primary-color;
 }
@@ -621,32 +669,8 @@ article {
   fill: $secondary-color;
 }
 
-.skewedSection-SVGBottom-logo{
-  position: absolute;
-  fill: $secondary-color;
-}
-
 .skewedSection-SVGBottom, .skewedSection-SVGBottom-vision, .skewedSection-SVGBottom-logo {
   bottom: 0;
-}
-
-.skewedSection-SVGBottom-text {
-  font-size: 1px;
-  font-weight: bold;
-  text-anchor: middle;
-  fill: $primary-color;
-}
-
-.skewedSection-SVGBottom-text2 {
-  font-size: 1px;
-  text-anchor: middle;
-  fill: white;
-}
-
-.skewed-container {
-  max-width: 1060px;
-  margin: 0 auto;
-  width: 90%;
 }
 
 section {
@@ -665,14 +689,25 @@ div {
   display: block;
 }
 
-/*SKEWED SECTION ENDS HERE*/
+/**********************************
+/* SECTION: VISION
+**********************************/
 
+.vision-intro {
+  background: $secondary-color;
+  padding-top: 1vh;
+  padding-bottom: 5vh;
 
-/*OUR VISION CONTENT*/
+  h3 {
+    color: $primary-color;
+    padding-left: 2.5vw;
+  }
+}
 
 .wrapper-vision {
-  max-width: 100vw;
+  max-width: 100%;
   margin: 0 auto;
+  height: 70vh;
 }
 
 .picture img {
@@ -682,48 +717,619 @@ div {
 .picture {
   float: left;
   width: 50%;
+  height: 70vh;
   padding: 5vw 5vh;
 }
 
 .article {
   float: left;
+  height: 70vh;
   width: 50%;
   padding: 5vw 5vh;
-  text-align: center;
+  text-align: left;
+
+  h3 {
+    color: $primary-color;
+    font-size: 2.5rem;
+  }
+
+  p {
+    color: $dark-grey;
+    font-size: 1.5rem;
+  }
 }
 
-/*OUR VISION CONTENT ENDS HERE*/
+.bkg-seminar {
+  background: $seminar; // Using an img variable for the url
+  background-size: cover;
+  background-position: center center;
+}
 
-/*FOOTER SECTION STARTS HERE*/
+.bkg-mentor {
+  background: $mentor; // Using an img variable for the url
+  background-size: cover;
+  background-position: center center;
+}
+
+.bkg-community {
+  background: $community; // Using an img variable for the url
+  background-size: cover;
+  background-position: center center;
+}
+
+/**********************************
+/* SECTION: FOOTER
+**********************************/
+
 .skewedSection-SVGTopW-footer {
   position: absolute;
   fill: #fff;
 }
 
+footer {
+  background-color: $primary-color;
+  padding-bottom: 50px;
+}
+
 .footer-content {
-  padding-top: 7vh;
-  padding-bottom: 7vh;
-  background-color: black;
+  padding-top: 20vh;
+  width: 100%;
+  height: 70vh;
 }
 
-.footerintro {
-  /*vertical-align: middle;*/
-  color: #fff;
+.footer-left {
+  float: left;
+  width: 50%;
+  padding-left: 2.5vw;
 }
 
-.signup {
-  margin: 0 auto;
-  width: 15%;
-  background: $secondary-color;
-  border: 5px solid $secondary-color;
-  border-radius: 30px;
-  color: #fff;
-  text-align: center;
+.footer-intro {
+  h3{
+    color: $secondary-color;
+  }
+
+  p {
+    color: #fff;
+  }
 }
 
-.info {
-  padding-top: 7vh;
-  display: flex;
-  justify-content: space-around;
-  color: #fff;
+.footer-signup {
+    width: 100%;
+    background-color: $primary-color;
+  }
+
+.footer-signup-wrapper {
+  width: 70%;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  color: $light-text-color;
+  font-size: 1.5rem;
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  border-bottom: 4px solid $secondary-color;
+  box-sizing: border-box;
+}
+
+input[type=text]:after {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: $minor-color;
+  color: $primary-color;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: $secondary-color;
+  color: white;
+  // opacity: 0.8;
+}
+
+.footer-right {
+  padding-top: 25vh;
+  padding-right: 2.5vw;
+  width: 50%;
+  float: left;
+  text-align: right;
+  
+  p {
+    color: #fff;
+  }
+
+  span {
+      color: $secondary-color;
+    }
+}
+
+/****************************************************************
+/*  RESPONSIVE CODE
+****************************************************************/
+
+/**********************************
+/* SECTION: HERO
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+
+  .hero-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.45;
+  }
+
+  .bkg-rocky-toronto {
+    background: $rockyTO; // Using an img variable for the url
+    background-size: cover;
+    background-position: left center;
+  }
+
+  /* Thematic Clip Paths */
+  .pentagon-right { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    left: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    max-width: 55vw;
+    margin: 0;
+
+    h1 {
+      color: $primary-color;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: $dark-grey;
+      font-size: 1.5rem;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    h3 {
+      color: $dark-grey;
+      text-transform: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+  }
+
+  .hero-signup-wrapper {
+    width: 25%;
+    margin-left: 10%;
+  }
+
+  #hero-signup {
+    background-color: $secondary-color;
+    border: none;
+    color: $light-text-color;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+}
+
+/*For Phones*/
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+
+    .hero-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.45;
+  }
+
+  .bkg-rocky-toronto {
+    background: $rockyTO; // Using an img variable for the url
+    background-size: cover;
+    background-position: left center;
+  }
+
+  /* Thematic Clip Paths */
+  .pentagon-right { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    left: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    max-width: 55vw;
+    margin: 0;
+
+    h1 {
+      color: $primary-color;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: $dark-grey;
+      font-size: 1.2rem;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    h3 {
+      color: $dark-grey;
+      text-transform: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+  }
+
+  .hero-signup-wrapper {
+    width: 35%;
+    margin-left: 10%;
+  }
+
+  #hero-signup {
+    background-color: $secondary-color;
+    border: none;
+    color: $light-text-color;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+}
+
+/**********************************
+/* SECTION: ABOUT
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+  .about {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    max-width: 100vw;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .about-content {
+    width: 90%;
+  }
+
+    /* Thematic Clip Paths */
+  .pentagon-left { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+}
+
+/*For Phones*/
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+  .about {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    max-width: 100vw;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .about-content {
+    width: 90%;
+  }
+
+    /* Thematic Clip Paths */
+  .pentagon-left { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+}
+
+/**********************************
+/* SECTION: EVENTS
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+  
+  .skewedSection .skewedSection-SVGTopW {
+    fill: $primary-color;
+  }
+
+  article {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .event-header {
+    width: 75%;
+  }
+
+}
+
+/*For Phones*/
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+  
+  .skewedSection .skewedSection-SVGTopW {
+    fill: $primary-color;
+  }
+
+  article {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .event-header {
+    width: 90%;
+  }
+
+}
+
+/**********************************
+/* SECTION: VISION
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+  
+  .vision-intro {
+    font-size: 1.5rem;
+  }
+
+  .wrapper-vision {
+    height: 100%;
+  }
+
+  .article {
+    float: left;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    position: relative;
+
+    h3 {
+       color: $primary-color;
+      font-size: 2rem;
+    }
+
+    p {
+      color: $dark-grey;
+      font-size: 1.5rem;
+    }
+  }
+
+  .picture {
+    float: left;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    opacity: 0.4;
+  }
+
+    .square {
+  // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+}
+
+/*For Phones*/
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+  
+  .vision-intro h3 {
+    font-size: 1rem;
+  }
+
+  .wrapper-vision {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 50vh;
+  }
+
+  .article {
+    float: left;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    text-align: left;
+    position: relative;
+
+    h3 {
+      color: $primary-color;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: $dark-grey;
+      font-size: 1rem;
+    }
+  }
+
+  .picture {
+    float: left;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    position: absolute;
+    opacity: 0.4;
+  }
+
+    .square {
+  // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+}
+
+/**********************************
+/* SECTION: FOOTER
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+
+  footer {
+    padding-top: 15%;
+    padding-bottom: 45%;
+  }
+
+  .footer-content {
+    width: 100%;
+    padding-top: 5vh;
+    height: 45vh;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-signup {
+    width: 100%;
+    background-color: $primary-color;
+  }
+
+  .footer-signup-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    color: $light-text-color;
+    font-size: 1.5rem;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-bottom: 4px solid $secondary-color;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: $minor-color;
+    color: $primary-color;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .footer-right {
+    width: 100%;
+    padding: 0;  
+    text-align: center;
+  }
+
+  .skewedSection-SVGTopW-footer {
+  position: absolute;
+  fill: $primary-color;
+}
+
+}
+
+/*For Phones*/
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+
+  .footer-content {
+    width: 100%;
+    padding-top: 5vh;
+    // height: 40vh;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-signup {
+    width: 100%;
+    background-color: $primary-color;
+  }
+
+  .footer-signup-wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    color: $light-text-color;
+    font-size: 1.5rem;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-bottom: 4px solid $secondary-color;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: $minor-color;
+    color: $primary-color;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .footer-right {
+    width: 100%;
+    padding: 0;    
+    text-align: center;
+  }
+
+  .skewedSection-SVGTopW-footer {
+    position: absolute;
+    fill: $primary-color;
+  }
+
 }
