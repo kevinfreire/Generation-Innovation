@@ -2,15 +2,16 @@
 <html>
 
 <head>
-	<title>Gen I</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gen I</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="UTF-8"/>
-	<link rel="stylesheet" href="styles/style.css">
-    <!-- <link rel='stylesheet' id='style-css' href='https://dmz.ryerson.ca/wp-content/themes/dmz/style.css?ver=4.9.8' type='text/css' media='all'/> -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 
 <body>
-	<header>
+    <header>
         <!-- Navigation will go here -->
         <nav>
             <div class="logo-wrapper">
@@ -53,33 +54,20 @@
         
             <div class="hero-image pentagon-right bkg-rocky-toronto"></div>
 
-            <!-- <div class="hero-image">
-                <div class="pentagon-right"></div>
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon fill="white" points="0,0 30,0 10,50 70,100 100,80 110,110 0,100" />
-                </svg>
-            </div> -->
-
-            <div class="signup">
-                <div class="signup-wrapper">
+            <div class="hero-signup">
+                <div class="hero-signup-wrapper">
                     <form id="hero-signup">
-                        <button id="hero-signup">
+                        <button id="hero-signup">sign up
                         </button>
                     </form>
                 </div>
             </div>
         </section>
 
-
-
     <!-- ABOUT US SECTION -->
 
     
-    	<div class="about">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon fill="white" points="0,75 40,90 60,40 30,0 0,12 0,0 100,0 100,100 0,100" />
-            </svg>
+        <div class="about pentagon-left">
 
             <div class="about-content">
                 <h1>What is Gen I?</h1>
@@ -90,142 +78,220 @@
                 
                 <p><span>Why York Region?</span> The social enteprise movement is growing in Ontario but it's concentrated in the downtown core.  We want to build this movement outward, starting with ensuring that social innovators in the York Region have a supportivecommunity, influential network, and practical resources for building scalable and sustainable social startups.</p>
             </div>
-    	</div>
+            
+        </div>
 
         <!-- EVENTS SECTION -->
 
-    	<section class="skewedSection">
-				<svg class="skewedSection-SVGTopW" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-				    <polygon points="100 0 100 10 0 0"></polygon>
-				</svg>
-				<div class="skewed-container">
-					<div class="skewedSection-contentWrapper">
-					    <h2 class="skewedSection-title">UPCOMING EVENTS</h2>
-					</div>
-				</div>
-				<svg class="skewedSection-SVGBottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-				    <polygon points="100 10 0 10 0 0"></polygon>
-				</svg>
-		</section>
+        <section class="skewedSection">
+                <svg class="skewedSection-SVGTopW" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <polygon points="100 0 100 10 0 0"></polygon>
+                </svg>
+                <div class="skewed-container">
+                    <div class="skewedSection-contentWrapper">
+                        <h1 class="skewedSection-title">UPCOMING EVENTS</h1>
+                    </div>
+                </div>
+                <svg class="skewedSection-SVGBottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <polygon points="100 10 0 10 0 0"></polygon>
+                </svg>
+        </section>
 
-    	<section class="events clearfix">
+        <section class="events clearfix">
+
             <div class="events-leed">
+
                 <h4>Get connected.</br>Learn about social enterprise.</br>Power up your world-changing oganization.</h4>
+                
             </div>
 
             <section class="events-info">
+
                 <div class="events-wrapper">
-                    <article>
-                        <div class="event-header">
-                            <div class="event-image">
-                                <img src="images/event-image.jpg">
-                            </div>
 
-                            <div class="date">
-                                <div class="date-box">
-                                    <h3>JAN</h3>
-                                    <h4>23</h4>
+                    <div class="carousel" data-flickity='{ "autoPlay": 2500, "freeScroll": true, "wrapAround": true, "groupCells": "100%" }'>
+
+                        <div class="carousel-cell">
+
+                            <article>
+                                <div class="event-header">
+                                    <div class="event-image">
+                                        <img src="images/event-image.jpg">
+                                    </div>
+
+                                    <div class="date">
+                                        <div class="date-box">
+                                            <h3>JAN</h3>
+                                            <h4>23</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="event-content">
-                            <h5>Social Finance 101: Funding Your Social Startup</h5>
-                            <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="event-header">
-                            <div class="event-image">
-                                <img src="images/event-coffee.jpg">
-                            </div>
 
-                            <div class="date">
-                                <div class="date-box">
-                                    <h3>FEB</h3>
-                                    <h4>05</h4>
+                                <div class="event-content">
+                                    <h5>Social Finance 101: Funding Your Social Startup</h5>
+                                    <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
                                 </div>
-                            </div>
+
+                                <div class="save-spot">
+                                    <p>Save your spot</p>
+                                </div>
+
+                            </article>
+
                         </div>
 
-                        <div class="event-content">
-                            <h5>Catalyst Coffees: Speed Networking for Social</h5>
-                            <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-    	</section>
+                        <div class="carousel-cell">
 
-        <!-- <section class="skewedSection-logo clearfix">
-                <svg class="skewedSection-SVGTopW-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-                    <polygon points="100 0 100 10 0 0"></polygon>
-                </svg>
-                <div class="container-logo">
-                    <div class="logo-content">
-                        <div class="logos"></div>
-                        <img src="images/logos.jpg">
+                            <article>
+                                <div class="event-header">
+
+                                    <div class="event-image">
+                                        <img src="images/event-coffee.jpg">
+                                    </div>
+
+                                    <div class="date">
+                                        <div class="date-box">
+                                            <h3>FEB</h3>
+                                            <h4>05</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="event-content">
+                                    <h5>Catalyst Coffees: Speed Networking for Social</h5>
+                                    <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+                                </div>
+
+                                <div class="save-spot">
+                                    <p>Save your spot</p>
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <div class="carousel-cell">
+
+                            <article>
+                                <div class="event-header">
+                                    <div class="event-image">
+                                        <img src="images/event-image.jpg">
+                                    </div>
+
+                                    <div class="date">
+                                        <div class="date-box">
+                                            <h3>JAN</h3>
+                                            <h4>23</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="event-content">
+                                    <h5>Social Finance 101: Funding Your Social Startup</h5>
+                                    <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+                                </div>
+
+                                <div class="save-spot">
+                                    <p>Save your spot</p>
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <div class="carousel-cell">
+
+                            <article>
+                                <div class="event-header">
+
+                                    <div class="event-image">
+                                        <img src="images/event-coffee.jpg">
+                                    </div>
+
+                                    <div class="date">
+                                        <div class="date-box">
+                                            <h3>FEB</h3>
+                                            <h4>05</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="event-content">
+                                    <h5>Catalyst Coffees: Speed Networking for Social</h5>
+                                    <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+                                </div>
+
+                                <div class="save-spot">
+                                    <p>Save your spot</p>
+                                </div>
+
+                            </article>
+
+                        </div>
+
                     </div>
+
                 </div>
-                <svg class="skewedSection-SVGBottom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-                    <polygon points="100 10 0 10 0 10"></polygon>
-                </svg>
-        </section>  -->    
+
+            </section>
+
+        </section>  
 
         <!-- EVENTS SECTION ENDS HERE -->
 
         <!-- OUR VISION SECTION -->
 
-    	<section class="skewedSection-vision">
-				<svg class="skewedSection-SVGTopW-vision" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-				    <polygon points="100 0 100 10 0 0"></polygon>
+        <section class="skewedSection-vision">
+                <svg class="skewedSection-SVGTopW-vision" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <polygon points="100 0 100 10 0 0"></polygon>
                 </svg>
                 
-				<div class="container">
-					<div class="skewedSection-contentWrapper">
-					    <h2 class="skewedSection-title">OUR VISION</h2>
-					</div>
+                <div class="skewed-container">
+                    <div class="skewedSection-contentWrapper">
+                        <h2 class="skewedSection-title">OUR VISION</h2>
+                    </div>
                 </div>
                 
-				<svg class="skewedSection-SVGBottom-vision" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg class="skewedSection-SVGBottom-vision" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <polygon points="100 10 0 10 0 0"></polygon>
-                    
-                    <text class="skewedSection-SVGBottom-text" x="19" y="6">Have an idea that could change the world, but don't know where to start?</text>
+                </svg>
+        </section>
 
-                    <text class="skewedSection-SVGBottom-text2" x="23" y="7.5">We want to help connect you to resources and mentors who are well-versed in social innovation.</text>
-				</svg>
-		</section>
+        <div class="vision-intro">
+            <h3>A York Region</br>social entrepreneurship hub</br>at the cutting edge of purpose + profit.</h3>
+        </div>
 
-    	<section class="vision clearfix">
-    		<div class="wrapper-vision clearfix">
-                <div class="picture">
-                    <img src="images/techmeeting.jpg">
+        <section class="vision clearfix">
+            <div class="wrapper-vision clearfix">
+                <div class="picture bkg-seminar square">
+                    <!-- <img src="images/techmeeting.jpg"> -->
                 </div>
 
                 <div class="article">
-        			<h3>Seminars &amp; Workshops</h3>
-        			<p>We'll have a variety of seminars, workshops, and networking events to help you get off the ground.</p>
+                    <h3>Seminars &amp; Workshops</h3>
+                    <p>We'll have a variety of seminars, workshops, and networking events to help you get off the ground.</p>
                 </div>
             </div>
             
-    		<div class="wrapper-vision clearfix">
+            <div class="wrapper-vision clearfix">
                 <div class="article">
-        			<h3>Mentorship</h3>
-        			<p>By joining our mentorship program, you'll tap into our network of social innovation veterans with decades of experience in the sector.</p>
+                    <h3>Mentorship</h3>
+                    <p>By joining our mentorship program, you'll tap into our network of social innovation veterans with decades of experience in the sector.</p>
                 </div>
-                <div class="picture">
-                    <img src="images/mentorship.jpg">
+                <div class="picture bkg-mentor square">
+                    <!-- <img src="images/mentorship.jpg"> -->
                 </div>
-    		</div>
-    		<div class="wrapper-vision clearfix">
-                <div class="picture">
-                    <img src="images/torontobuilding.jpg">
+            </div>
+            <div class="wrapper-vision clearfix">
+                <div class="picture bkg-community square">
+                    <!-- <img src="images/torontobuilding.jpg"> -->
                 </div>
                 <div class="article">
-        			<h3>Community</h3>
-        			<p>We're all about community! We believe the key to success is learning from others, so we're here to build a community of passionate social innovators.</p>
+                    <h3>Community</h3>
+                    <p>We're all about community! We believe the key to success is learning from others, so we're here to build a community of passionate social innovators.</p>
                 </div>
-    		</div>
-    	</section>
+            </div>
+        </section>
 
         <!-- OUR VISION SECTION ENDS HERE -->
     </main>
@@ -234,32 +300,34 @@
         <svg class="skewedSection-SVGTopW-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <polygon points="100 0 100 10 0 0"></polygon>
         </svg>
+        <section>
         <div class="footer-content">
-        	<div class="footerintro">
-        		<h1>Sign up for our</br>newsletter to keep</br>updated!</h1>
-        	</div>
-            <div class="signup">sign up</div>
-            <div class="info">
-                <div>GenI</div>
-                <div>FAQ</div>
-                <div>Privacy Policy</div>
-                <div>Terms &amp; Conditions</div>
+            <div class="footer-left">
+                <div class="footer-intro">
+                    <h3>Stay in the loop.</h3>
+                    <p>Get the latest on York Region social enterprise events, workshops, and resources in our newsletter.</p>
+                </div>
+                <div class="footer-signup">
+                    <div class="footer-signup-wrapper">
+                        <form id="footer-signup" action="/action_page.php">
+                            <div class="email-container">
+                                <input type="text" placeholder="E-Mail" name="mail" required>
+                            </div>
+                            <div class="email-container">
+                                <input type="submit" value="sign up">
+                            </div>
+                            </button>
+                        </form>
+                    </div>             
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>&copy 2018 GEN I (Generation I)</br>Questions? Email us: <span>hello@gen-i</span></p>
+                <p> Designed by Julian Louie, Daniel Chew & Maggie Cheung</br>Developed by Kevin Freire.</p>
             </div>
         </div>
+        </section>
     </footer>
-
-<!--     <script>
-        // When the user scrolls down 20px from the top of the document, slide down the navbar
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("navbar").style.top = "0";
-          } else {
-            document.getElementById("navbar").style.top = "-50px";
-          }
-        }
-    </script> -->
 
 </body>
 </html>
