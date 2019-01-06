@@ -1,0 +1,327 @@
+/**********************************
+/* RESPONSIVE ADJUSTMENTS
+**********************************/
+
+/* Transitions */
+$all-ease-in: all ease-in 0.3s;
+
+/* Typography Variables */
+$body-font: 'Open Sans', Arial, Helvetica, sans-serif;
+$header-font: 'Avenir Next', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$navbar-font: 'Avenir Next', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+/* Colour Variables */
+$primary-color: #350462; // Dark Purple
+$secondary-color: #03DCBB; // Aqua
+$minor-color: #FED702; // Gold
+$light-accent-color: #FFFFFF; // White
+$dark-grey: #333; // Dark Grey
+$dark-text-color: #000000; // Black
+$light-text-color: #FFFFFF; // White
+
+/* Background Images */
+$rockyTO: url('../images/rockyshoretoronto.jpg');
+$seminar: url('../images/techmeeting.jpg');
+$mentor: url('../images/mentorship.jpg');
+$community: url('../images/torontobuilding.jpg');
+
+
+/**********************************
+/* SECTION: HERO (TOP)
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+
+  .hero-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.45;
+  }
+
+  .bkg-rocky-toronto {
+    background: $rockyTO; // Using an img variable for the url
+    background-size: cover;
+    background-position: left center;
+  }
+
+  /* Thematic Clip Paths */
+  .pentagon-right { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    left: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    max-width: 55vw;
+    margin: 0;
+
+    h1 {
+      color: $primary-color;
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: $dark-grey;
+      font-size: 1.5rem;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    h3 {
+      color: $dark-grey;
+      text-transform: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+  }
+
+}
+
+/* iphone */
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+
+    .hero-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.45;
+  }
+
+  .bkg-rocky-toronto {
+    background: $rockyTO; // Using an img variable for the url
+    background-size: cover;
+    background-position: left center;
+  }
+
+  /* Thematic Clip Paths */
+  .pentagon-right { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    left: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    max-width: 55vw;
+    margin: 0;
+
+    h1 {
+      color: $primary-color;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: $dark-grey;
+      font-size: 1.2rem;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    h3 {
+      color: $dark-grey;
+      text-transform: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+  }
+}
+
+
+/**********************************
+/* SECTION: ABOUT
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+  .about {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    max-width: 100vw;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .about-content {
+    width: 90%;
+  }
+
+    /* Thematic Clip Paths */
+  .pentagon-left { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+}
+
+/* iphone */
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+  .about {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    max-width: 100vw;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .about-content {
+    width: 90%;
+  }
+
+    /* Thematic Clip Paths */
+  .pentagon-left { // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+}
+
+
+/**********************************
+/* SECTION: EVENTS
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+  
+  .skewedSection .skewedSection-SVGTopW {
+    fill: $primary-color;
+  }
+
+  article {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+
+}
+
+/* iphone */
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+  
+  .skewedSection .skewedSection-SVGTopW {
+    fill: $primary-color;
+  }
+
+  article {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 30px;
+  }
+
+}
+
+
+/**********************************
+/* SECTION: VISION
+**********************************/
+
+/*For Tablets*/
+@media only screen and (min-width:550px) and (max-width : 1024px) {
+  
+  .vision-intro {
+    font-size: 1.5rem;
+  }
+
+  .wrapper-vision {
+    height: 100%;
+  }
+
+  .article {
+    float: left;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    position: relative;
+
+    h3 {
+       color: $primary-color;
+      font-size: 2rem;
+    }
+
+    p {
+      color: $dark-grey;
+      font-size: 1.5rem;
+    }
+  }
+
+  .picture {
+    float: left;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    opacity: 0.4;
+  }
+
+    .square {
+  // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+}
+
+/* iphone */
+@media only screen and (min-width : 300px) and (max-width : 550px) {
+  
+  .vision-intro h3 {
+    font-size: 1rem;
+  }
+
+  .wrapper-vision {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 50vh;
+  }
+
+  .article {
+    float: left;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    text-align: left;
+    position: relative;
+
+    h3 {
+      color: $primary-color;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: $dark-grey;
+      font-size: 1rem;
+    }
+  }
+
+  .picture {
+    float: left;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    position: absolute;
+    opacity: 0.4;
+  }
+
+    .square {
+  // keeping this clip-path separate in case I want to resue it for other pieces of content later
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+}
