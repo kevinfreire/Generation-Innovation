@@ -6,225 +6,6 @@
 /* - Cross-Browser border-box
 **********************************/
 @import url(normalize.css);
-/**********************************
-/* RESPONSIVE ADJUSTMENTS
-**********************************/
-/* Transitions */
-/* Typography Variables */
-/* Colour Variables */
-/* Background Images */
-/**********************************
-/* SECTION: HERO (TOP)
-**********************************/
-/*For Tablets*/
-@media only screen and (min-width: 550px) and (max-width: 1024px) {
-  .hero-image {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 0.45; }
-
-  .bkg-rocky-toronto {
-    background: url("../images/rockyshoretoronto.jpg");
-    background-size: cover;
-    background-position: left center; }
-
-  /* Thematic Clip Paths */
-  .pentagon-right {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
-
-  .hero-content {
-    position: relative;
-    left: 0;
-    padding-left: 10%;
-    padding-right: 5%;
-    max-width: 55vw;
-    margin: 0; }
-    .hero-content h1 {
-      color: #350462;
-      font-size: 2.5rem;
-      line-height: 1.2; }
-    .hero-content h2 {
-      color: #333;
-      font-size: 1.5rem;
-      text-transform: none;
-      font-weight: normal; }
-    .hero-content h3 {
-      color: #333;
-      text-transform: none;
-      font-size: 1.5rem;
-      font-weight: bold; } }
-/* iphone */
-@media only screen and (min-width: 300px) and (max-width: 550px) {
-  .hero-image {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 0.45; }
-
-  .bkg-rocky-toronto {
-    background: url("../images/rockyshoretoronto.jpg");
-    background-size: cover;
-    background-position: left center; }
-
-  /* Thematic Clip Paths */
-  .pentagon-right {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
-
-  .hero-content {
-    position: relative;
-    left: 0;
-    padding-left: 10%;
-    padding-right: 5%;
-    max-width: 55vw;
-    margin: 0; }
-    .hero-content h1 {
-      color: #350462;
-      font-size: 2rem;
-      line-height: 1.2; }
-    .hero-content h2 {
-      color: #333;
-      font-size: 1.2rem;
-      text-transform: none;
-      font-weight: normal; }
-    .hero-content h3 {
-      color: #333;
-      text-transform: none;
-      font-size: 1.2rem;
-      font-weight: bold; } }
-/**********************************
-/* SECTION: ABOUT
-**********************************/
-/*For Tablets*/
-@media only screen and (min-width: 550px) and (max-width: 1024px) {
-  .about {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    max-width: 100vw;
-    margin: 0 auto;
-    height: 100%; }
-
-  .about-content {
-    width: 90%; }
-
-  /* Thematic Clip Paths */
-  .pentagon-left {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); } }
-/* iphone */
-@media only screen and (min-width: 300px) and (max-width: 550px) {
-  .about {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    max-width: 100vw;
-    margin: 0 auto;
-    height: 100%; }
-
-  .about-content {
-    width: 90%; }
-
-  /* Thematic Clip Paths */
-  .pentagon-left {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); } }
-/**********************************
-/* SECTION: EVENTS
-**********************************/
-/*For Tablets*/
-@media only screen and (min-width: 550px) and (max-width: 1024px) {
-  .skewedSection .skewedSection-SVGTopW {
-    fill: #350462; }
-
-  article {
-    width: 100%;
-    margin-right: 0;
-    padding-bottom: 30px; } }
-/* iphone */
-@media only screen and (min-width: 300px) and (max-width: 550px) {
-  .skewedSection .skewedSection-SVGTopW {
-    fill: #350462; }
-
-  article {
-    width: 100%;
-    margin-right: 0;
-    padding-bottom: 30px; } }
-/**********************************
-/* SECTION: VISION
-**********************************/
-/*For Tablets*/
-@media only screen and (min-width: 550px) and (max-width: 1024px) {
-  .vision-intro {
-    font-size: 1.5rem; }
-
-  .wrapper-vision {
-    height: 100%; }
-
-  .article {
-    float: left;
-    width: 100%;
-    padding: 0;
-    text-align: left;
-    position: relative; }
-    .article h3 {
-      color: #350462;
-      font-size: 2rem; }
-    .article p {
-      color: #333;
-      font-size: 1.5rem; }
-
-  .picture {
-    float: left;
-    width: 100%;
-    padding: 0;
-    position: absolute;
-    opacity: 0.4; }
-
-  .square {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
-/* iphone */
-@media only screen and (min-width: 300px) and (max-width: 550px) {
-  .vision-intro h3 {
-    font-size: 1rem; }
-
-  .wrapper-vision {
-    max-width: 100%;
-    margin: 0 auto;
-    height: 50vh; }
-
-  .article {
-    float: left;
-    width: 100%;
-    height: 50vh;
-    padding: 0;
-    text-align: left;
-    position: relative; }
-    .article h3 {
-      color: #350462;
-      font-size: 1.5rem; }
-    .article p {
-      color: #333;
-      font-size: 1rem; }
-
-  .picture {
-    float: left;
-    width: 100%;
-    height: 50vh;
-    padding: 0;
-    position: absolute;
-    opacity: 0.4; }
-
-  .square {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -525,14 +306,15 @@ nav {
   right: 0;
   bottom: auto;
   z-index: 999;
-  height: 60px;
   background: #350462;
   font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
-  padding: 0; }
+  padding: 0;
+  padding-left: 40px;
+  padding-right: 50px; }
   nav ul {
     margin: 0;
     padding: 0;
@@ -556,8 +338,8 @@ nav {
       nav ul li a:hover {
         background: #03DCBB; }
   nav .logo-wrapper {
-    width: 20%;
-    height: 100%;
+    width: 100px;
+    height: auto;
     float: left; }
     nav .logo-wrapper #logo {
       display: block;
@@ -576,8 +358,7 @@ nav {
       letter-spacing: 0.8px;
       line-height: 60px;
       font-size: 42px;
-      padding-right: 30px;
-      float: right; }
+      padding-right: 30px; }
 
 /**********************************
 /* SECTION: HERO (TOP)
@@ -599,14 +380,15 @@ nav {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-top: 3rem; }
+  padding-top: 120px; }
 
 .hero-content {
   position: relative;
   left: 0;
   padding-left: 10%;
   padding-right: 5%;
-  max-width: 55vw; }
+  max-width: 55vw;
+  margin: 0; }
   .hero-content h1 {
     color: #350462;
     font-size: 3.75rem;
@@ -739,6 +521,7 @@ article {
   background: white; }
 
 .carousel {
+  background: transparent;
   /*background: #EEE;*/ }
 
 .carousel-cell {
@@ -979,14 +762,18 @@ input[type=submit]:hover {
   .footer-right span {
     color: #03DCBB; }
 
-/****************************************************************
-/*  RESPONSIVE CODE
-****************************************************************/
 /**********************************
-/* SECTION: HERO
+/* RESPONSIVE ADJUSTMENTS
+**********************************/
+/* Transitions */
+/* Typography Variables */
+/* Colour Variables */
+/* Background Images */
+/**********************************
+/* SECTION: HERO (TOP)
 **********************************/
 /*For Tablets*/
-@media only screen and (min-width: 550px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .hero-image {
     height: 100vh;
     width: 100vw;
@@ -1001,18 +788,8 @@ input[type=submit]:hover {
     background-size: cover;
     background-position: left center; }
 
-  /* Thematic Clip Paths */
-  .pentagon-right {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
-
   .hero-content {
-    position: relative;
-    left: 0;
-    padding-left: 10%;
-    padding-right: 5%;
-    max-width: 55vw;
-    margin: 0; }
+    max-width: 100%; }
     .hero-content h1 {
       color: #350462;
       font-size: 2.5rem;
@@ -1026,23 +803,9 @@ input[type=submit]:hover {
       color: #333;
       text-transform: none;
       font-size: 1.5rem;
-      font-weight: bold; }
-
-  .hero-signup-wrapper {
-    width: 25%;
-    margin-left: 10%; }
-
-  #hero-signup {
-    background-color: #03DCBB;
-    border: none;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer; } }
-/*For Phones*/
-@media only screen and (min-width: 300px) and (max-width: 550px) {
+      font-weight: bold; } }
+/* iphone */
+@media only screen and (max-width: 550px) {
   .hero-image {
     height: 100vh;
     width: 100vw;
@@ -1052,51 +815,20 @@ input[type=submit]:hover {
     z-index: -1;
     opacity: 0.45; }
 
-  .bkg-rocky-toronto {
-    background: url("../images/rockyshoretoronto.jpg");
-    background-size: cover;
-    background-position: left center; }
-
-  /* Thematic Clip Paths */
-  .pentagon-right {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
-
-  .hero-content {
-    position: relative;
-    left: 0;
-    padding-left: 10%;
-    padding-right: 5%;
-    max-width: 55vw;
-    margin: 0; }
-    .hero-content h1 {
-      color: #350462;
-      font-size: 2rem;
-      line-height: 1.2; }
-    .hero-content h2 {
-      color: #333;
-      font-size: 1.2rem;
-      text-transform: none;
-      font-weight: normal; }
-    .hero-content h3 {
-      color: #333;
-      text-transform: none;
-      font-size: 1.2rem;
-      font-weight: bold; }
-
-  .hero-signup-wrapper {
-    width: 35%;
-    margin-left: 10%; }
-
-  #hero-signup {
-    background-color: #03DCBB;
-    border: none;
-    color: #FFFFFF;
-    padding: 15px 15px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer; } }
+  .hero-content h1 {
+    color: #350462;
+    font-size: 2rem;
+    line-height: 1.2; }
+  .hero-content h2 {
+    color: #333;
+    font-size: 1.2rem;
+    text-transform: none;
+    font-weight: normal; }
+  .hero-content h3 {
+    color: #333;
+    text-transform: none;
+    font-size: 1.2rem;
+    font-weight: bold; } }
 /**********************************
 /* SECTION: ABOUT
 **********************************/
@@ -1116,7 +848,7 @@ input[type=submit]:hover {
   .pentagon-left {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); } }
-/*For Phones*/
+/* iphone */
 @media only screen and (min-width: 300px) and (max-width: 550px) {
   .about {
     padding-top: 2vh;
@@ -1143,11 +875,8 @@ input[type=submit]:hover {
   article {
     width: 100%;
     margin-right: 0;
-    padding-bottom: 30px; }
-
-  .event-header {
-    width: 75%; } }
-/*For Phones*/
+    padding-bottom: 30px; } }
+/* iphone */
 @media only screen and (min-width: 300px) and (max-width: 550px) {
   .skewedSection .skewedSection-SVGTopW {
     fill: #350462; }
@@ -1155,10 +884,7 @@ input[type=submit]:hover {
   article {
     width: 100%;
     margin-right: 0;
-    padding-bottom: 30px; }
-
-  .event-header {
-    width: 90%; } }
+    padding-bottom: 30px; } }
 /**********************************
 /* SECTION: VISION
 **********************************/
@@ -1193,7 +919,7 @@ input[type=submit]:hover {
   .square {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
-/*For Phones*/
+/* iphone */
 @media only screen and (min-width: 300px) and (max-width: 550px) {
   .vision-intro h3 {
     font-size: 1rem; }
@@ -1228,115 +954,3 @@ input[type=submit]:hover {
   .square {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
-/**********************************
-/* SECTION: FOOTER
-**********************************/
-/*For Tablets*/
-@media only screen and (min-width: 550px) and (max-width: 1024px) {
-  footer {
-    padding-top: 15%;
-    padding-bottom: 45%; }
-
-  .footer-content {
-    width: 100%;
-    padding-top: 5vh;
-    height: 45vh; }
-
-  .footer-left {
-    width: 100%;
-    text-align: center;
-    padding: 0; }
-
-  .footer-signup {
-    width: 100%;
-    background-color: #350462; }
-
-  .footer-signup-wrapper {
-    width: 50%;
-    margin: 0 auto; }
-
-  input[type=text] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    background-color: #350462;
-    border: 1px solid #350462;
-    border-bottom: 4px solid #03DCBB;
-    box-sizing: border-box; }
-
-  input[type=submit] {
-    width: 100%;
-    padding: 15px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
-    background-color: #FED702;
-    color: #350462;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold; }
-
-  .footer-right {
-    width: 100%;
-    padding: 0;
-    text-align: center; }
-
-  .skewedSection-SVGTopW-footer {
-    position: absolute;
-    fill: #350462; } }
-/*For Phones*/
-@media only screen and (min-width: 300px) and (max-width: 550px) {
-  .footer-content {
-    width: 100%;
-    padding-top: 5vh; }
-
-  .footer-left {
-    width: 100%;
-    text-align: center;
-    padding: 0; }
-
-  .footer-signup {
-    width: 100%;
-    background-color: #350462; }
-
-  .footer-signup-wrapper {
-    width: 75%;
-    margin: 0 auto; }
-
-  input[type=text] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    background-color: #350462;
-    border: 1px solid #350462;
-    border-bottom: 4px solid #03DCBB;
-    box-sizing: border-box; }
-
-  input[type=submit] {
-    width: 100%;
-    padding: 15px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
-    background-color: #FED702;
-    color: #350462;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold; }
-
-  .footer-right {
-    width: 100%;
-    padding: 0;
-    text-align: center; }
-
-  .skewedSection-SVGTopW-footer {
-    position: absolute;
-    fill: #350462; } }
-
-/*# sourceMappingURL=style.css.map */
