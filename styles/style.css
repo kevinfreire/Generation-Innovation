@@ -211,10 +211,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 **********************************/
 /* Typography Variables */
 /* Colour Variables */
-/* Gradients */
 /* Transitions */
-/* Borders */
 /* Background Images */
+/* Event Images */
 /**********************************
 /* TYPOGRAPHY STYLES
 /* - Setup (body, html)
@@ -227,55 +226,78 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 body, html {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 14px;
-  color: #000000; }
+  color: #000000;
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.8px; }
 
 /* Really, I'm just using these below H1-6 styles to assign a variety of font sizing that I know I'll be using throughout this design */
 h1 {
-  font-size: 5rem; }
+  font-size: 3rem; }
 
 h2 {
-  font-size: 3.75rem;
-  text-transform: uppercase; }
-
-h3 {
   font-size: 2rem;
   text-transform: uppercase; }
 
+h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
 h4 {
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   font-weight: 200; }
 
 h5 {
-  font-size: 1.25rem; }
+  font-size: 1rem; }
 
 h6 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: bold; }
 
 p {
   line-height: 1.5;
-  letter-spacing: 1.1px; }
+  letter-spacing: 0.8px; }
 
 /* Links within paragraphs */
 p a {
   font-weight: bold;
   color: #03DCBB; }
 
+/* CTAs */
+.button {
+  display: inline-block;
+  background: #03DCBB;
+  border: none;
+  border-radius: 30px;
+  min-width: 200px;
+  width: auto;
+  transition: all ease-in 0.3s; }
+  .button a {
+    display: block;
+    padding: 1rem 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center; }
+
+.button:hover {
+  background: #350462; }
+
 /**********************************
 /* GLOBAL LAYOUT OBJECTS
 /* - .container (max-width)
 /* - Image backgrounds
 /* - Thematic clip paths
+/* - Geometry graphic
 **********************************/
 .container {
-  max-width: 95%;
+  max-width: 1280px;
   margin: 0 auto; }
 
 .absolute {
@@ -288,8 +310,8 @@ p a {
 
 /* Thematic Clip Paths */
 .pentagon-left {
-  -webkit-clip-path: polygon(0 15%, 35% 0, 65% 50%, 50% 100%, 0 90%);
-  clip-path: polygon(0 15%, 35% 0, 65% 50%, 50% 100%, 0 90%);
+  -webkit-clip-path: polygon(0 15%, 35% 0, 65% 50%, 50% 100%, 0 92%);
+  clip-path: polygon(0 15%, 35% 0, 65% 50%, 50% 100%, 0 92%);
   background-color: #350462; }
 
 .square {
@@ -380,13 +402,16 @@ nav {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  padding-top: 120px; }
+  display: flex;
+  align-items: center;
+  justify-content: left; }
 
 .hero-content {
   position: relative;
   left: 0;
   padding-left: 10%;
   padding-right: 5%;
+  width: 100%;
   max-width: 55vw;
   margin: 0; }
   .hero-content h1 {
@@ -407,34 +432,6 @@ nav {
     margin: 0 auto;
     width: 100%;
     text-align: left; }
-    .hero-content .signup-wrapper #hero-signup {
-      display: inline-block;
-      background: #03DCBB;
-      border: none;
-      border-radius: 30px;
-      padding: 8px 12px;
-      min-width: 180px;
-      color: #fff;
-      font-weight: 700;
-      width: auto; }
-
-.hero-signup {
-  width: 100%; }
-
-.hero-signup-wrapper {
-  width: 25%;
-  margin-left: 10%; }
-
-#hero-signup {
-  background-color: #03DCBB;
-  border: none;
-  color: #FFFFFF;
-  padding: 12px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none; }
 
 /**********************************
 /* SECTION: ABOUT
@@ -442,50 +439,66 @@ nav {
 .about {
   padding-top: 10vh;
   padding-bottom: 10vh;
-  max-width: 100vw;
-  margin: 0 auto;
-  height: 100%; }
+  margin: 0 0 auto;
+  height: 100%;
+  position: relative; }
+
+.about-shape {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  width: 1000px;
+  margin: 0 0 auto;
+  height: 100%;
+  position: relative; }
 
 .about-content {
-  width: 50%; }
-
-.about-content h1 {
-  padding-left: 2.5vw;
-  color: #03DCBB;
-  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 3em; }
-
-.about-content h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.25em;
-  padding-left: 2.5vw;
-  color: #FED702; }
-
-.about-content p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.15em;
-  padding-left: 2.5vw;
+  width: 55%;
+  max-width: 600px;
+  padding: 2rem 5%;
   color: #fff; }
+  .about-content h1 {
+    color: #03DCBB;
+    font-size: 3rem; }
+  .about-content h2 {
+    font-size: 1.5rem;
+    color: #FED702; }
 
 .about-content span {
   text-transform: uppercase;
   font-weight: bold; }
 
+.geometry-1 {
+  position: absolute;
+  z-index: -1;
+  bottom: -160px;
+  right: 0;
+  width: 600px; }
+  .geometry-1 img {
+    max-width: 100%; }
+
 /**********************************
 /* SECTION: EVENTS
 **********************************/
 .events {
+  position: relative;
+  z-index: -1;
   max-width: 100%;
   background: #350462;
-  padding-bottom: 25px; }
+  padding-bottom: 8rem;
+  margin-top: -10rem;
+  padding-top: 6rem; }
 
 .events-wrapper {
   width: 90%;
   margin: 0 auto; }
 
 .events-leed {
-  padding: 1vh 2.5vw;
+  padding-bottom: 3rem;
   color: #FED702; }
+  .events-leed h2 {
+    margin-top: 0;
+    text-transform: none;
+    font-weight: 200; }
 
 .date {
   text-align: center;
@@ -499,6 +512,9 @@ nav {
     .date .date-box h3, .date .date-box h4 {
       color: #FFFFFF;
       margin: 0; }
+    .date .date-box h4 {
+      line-height: 1;
+      font-size: 3rem; }
 
 article {
   background: #350462;
@@ -506,7 +522,7 @@ article {
 
 /* position dots in gallery */
 .flickity-page-dots {
-  bottom: 0px; }
+  bottom: -60px !important; }
 
 /* white circles */
 .flickity-page-dots .dot {
@@ -525,9 +541,13 @@ article {
   /*background: #EEE;*/ }
 
 .carousel-cell {
-  width: 49%;
-  margin-right: 10px;
-  counter-increment: gallery-cell; }
+  width: 50%;
+  padding-right: 2%;
+  counter-increment: gallery-cell;
+  float: left; }
+
+.carousel-cell:nth-of-type(2) {
+  padding-right: 0; }
 
 /* cell number */
 .carousel-cell:before {
@@ -542,69 +562,90 @@ article {
   justify-content: left;
   overflow: hidden;
   margin: 0 auto; }
-  .event-header .event-image img {
-    width: 100%;
-    height: 50vh; }
   .event-header .event-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; }
+    width: 100%;
+    height: 50vh; }
+  .event-header .feb-25 {
+    background: url("../images/event-feb25.jpg");
+    background-size: cover;
+    background-position: center center; }
+  .event-header .coffee {
+    background: url("../images/event-coffee.jpg");
+    background-size: cover;
+    background-position: center center; }
 
 .event-content {
-  padding: 0 0 4rem; }
-  .event-content h5 {
-    color: #03DCBB; }
+  padding: 0 0 2rem; }
+  .event-content h4 {
+    color: #03DCBB;
+    font-size: 2rem;
+    font-weight: 600; }
+  .event-content p {
+    color: #fff; }
 
-.event-content p {
-  color: #fff; }
+.save-spot-wrap {
+  text-align: left; }
+
+a.save-spot {
+  text-decoration: none; }
 
 .save-spot {
   background: #FED702;
   text-align: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 5px 0px 5px 0px; }
+  padding: 2px 15px;
+  display: inline-block; }
   .save-spot p {
     color: #350462;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.5rem; }
+    font-size: 1.25rem;
+    line-height: 1; }
 
 /**********************************
 /* THIS IS FOR THE SKEWED SECTION
 **********************************/
-.skewedSection, .skewedSection-vision, .skewedSection-logo {
-  position: relative; }
+.skewedSection, .skewedSection-events, .skewedSection-vision, .skewedSection-logo {
+  position: relative;
+  overflow: visible; }
 
 .skewedSection {
-  background: url(../images/header-vision.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
+.skewedSection-events {
+  background: url(../images/header-events.jpg);
+  background-position: center left;
+  background-size: 120vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 70%);
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 70%); }
+
 .skewedSection-vision {
-  background: url(../images/light.jpg);
-  background-position: center top;
-  background-size: cover;
+  background: url(../images/header-vision.jpg);
+  background-position: top left;
+  background-size: 150vw;
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
 .skewedSection-title {
   font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 30px;
   line-height: 1.2;
-  color: #fff; }
+  color: #350462; }
 
 .skewedSection-contentWrapper {
-  padding-top: 210px;
-  padding-bottom: 245px;
-  min-height: 160px;
+  padding-top: 12%;
+  padding-bottom: 25%;
+  height: 4rem;
   vertical-align: middle; }
 
 .skewed-container {
-  max-width: 1060px;
+  max-width: 1280px;
   margin: 0 auto;
   width: 90%; }
 
@@ -642,55 +683,63 @@ div {
 /**********************************
 /* SECTION: VISION
 **********************************/
+.vision {
+  padding: 0 0 14rem;
+  position: relative; }
+
 .vision-intro {
   background: #03DCBB;
-  padding-top: 1vh;
-  padding-bottom: 5vh; }
-  .vision-intro h3 {
-    color: #350462;
-    padding-left: 2.5vw; }
-
-.wrapper-vision {
-  max-width: 100%;
-  margin: 0 auto;
-  height: 70vh; }
-
-.picture img {
-  max-width: 100%; }
+  padding-left: 4%;
+  padding-bottom: 4rem;
+  color: #350462;
+  margin-bottom: 4rem; }
+  .vision-intro h2 {
+    margin-top: 0;
+    text-transform: none; }
 
 .picture {
   float: left;
   width: 50%;
-  height: 70vh;
-  padding: 5vw 5vh; }
+  height: 60vh;
+  padding: 5%; }
 
 .article {
   float: left;
-  height: 70vh;
+  height: 60vh;
   width: 50%;
-  padding: 5vw 5vh;
-  text-align: left; }
+  text-align: left;
+  padding: 5% 4% 5%; }
   .article h3 {
+    font-size: 2.25rem;
     color: #350462;
-    font-size: 2.5rem; }
+    margin-bottom: 0;
+    text-transform: none; }
   .article p {
-    color: #333;
-    font-size: 1.5rem; }
+    font-size: 1.25rem; }
 
 .bkg-seminar {
-  background: url("../images/techmeeting.jpg");
+  background: url("../images/vision-workshops.png");
   background-size: cover;
   background-position: center center; }
 
 .bkg-mentor {
-  background: url("../images/mentorship.jpg");
+  background: url("../images/vision-mentorship.png");
   background-size: cover;
   background-position: center center; }
 
 .bkg-community {
-  background: url("../images/torontobuilding.jpg");
+  background: url("../images/vision-community.png");
   background-size: cover;
   background-position: center center; }
+
+.geometry-2 {
+  position: absolute;
+  z-index: 2;
+  bottom: -180px;
+  right: 0;
+  width: 600px; }
+  .geometry-2 img {
+    max-width: 100%; }
 
 /**********************************
 /* SECTION: FOOTER
@@ -700,13 +749,27 @@ div {
   fill: #fff; }
 
 footer {
+  position: relative;
+  z-index: 2;
   background-color: #350462;
-  padding-bottom: 50px; }
+  color: #FFFFFF;
+  -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+  padding-top: 10rem; }
+  footer h2 {
+    color: #03DCBB;
+    text-transform: none; }
+  footer .button {
+    margin-top: 1rem;
+    background: #FED702; }
+    footer .button a {
+      color: #350462;
+      font-weight: 900; }
 
 .footer-content {
-  padding-top: 20vh;
+  padding-top: 2rem;
   width: 100%;
-  height: 70vh; }
+  height: 55vh; }
 
 .footer-left {
   float: left;
@@ -719,19 +782,22 @@ footer {
   justify-content: space-around;
   color: #fff; }
 
-input[type=text] {
+input.email {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
   display: inline-block;
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   background-color: #350462;
   border: 1px solid #350462;
   border-bottom: 4px solid #03DCBB;
   box-sizing: border-box; }
 
-input[type=text]:after {
+input.email::placeholder {
+  color: #03DCBB; }
+
+input.email:after {
   background-color: #350462;
   border: 1px solid #350462; }
 
@@ -792,7 +858,7 @@ input[type=submit]:hover {
     max-width: 100%; }
     .hero-content h1 {
       color: #350462;
-      font-size: 2.5rem;
+      font-size: 2rem;
       line-height: 1.2; }
     .hero-content h2 {
       color: #333;
@@ -802,7 +868,7 @@ input[type=submit]:hover {
     .hero-content h3 {
       color: #333;
       text-transform: none;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: bold; } }
 /* iphone */
 @media only screen and (max-width: 550px) {
@@ -813,7 +879,7 @@ input[type=submit]:hover {
     top: 0;
     right: 0;
     z-index: -1;
-    opacity: 0.45; }
+    opacity: 0.35; }
 
   .hero-content h1 {
     color: #350462;
@@ -821,33 +887,35 @@ input[type=submit]:hover {
     line-height: 1.2; }
   .hero-content h2 {
     color: #333;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     text-transform: none;
     font-weight: normal; }
   .hero-content h3 {
     color: #333;
     text-transform: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold; } }
 /**********************************
 /* SECTION: ABOUT
 **********************************/
 /*For Tablets*/
 @media only screen and (min-width: 550px) and (max-width: 1024px) {
-  .about {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    max-width: 100vw;
-    margin: 0 auto;
-    height: 100%; }
+  .about-shape {
+    position: relative;
+    top: -100px;
+    padding-top: 0;
+    padding-bottom: 4rem;
+    clip-path: none;
+    background: transparent; }
 
   .about-content {
-    width: 90%; }
+    width: 90%;
+    color: #000000; }
+    .about-content h2 {
+      color: #350462; }
 
-  /* Thematic Clip Paths */
-  .pentagon-left {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); } }
+  .geometry-1 {
+    width: 500px; } }
 /* iphone */
 @media only screen and (min-width: 300px) and (max-width: 550px) {
   .about {
@@ -858,12 +926,7 @@ input[type=submit]:hover {
     height: 100%; }
 
   .about-content {
-    width: 90%; }
-
-  /* Thematic Clip Paths */
-  .pentagon-left {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%); } }
+    width: 90%; } }
 /**********************************
 /* SECTION: EVENTS
 **********************************/
@@ -871,6 +934,9 @@ input[type=submit]:hover {
 @media only screen and (min-width: 550px) and (max-width: 1024px) {
   .skewedSection .skewedSection-SVGTopW {
     fill: #350462; }
+
+  .events-leed {
+    padding-top: 4rem; }
 
   article {
     width: 100%;
@@ -891,7 +957,8 @@ input[type=submit]:hover {
 /*For Tablets*/
 @media only screen and (min-width: 550px) and (max-width: 1024px) {
   .vision-intro {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin-bottom: 0; }
 
   .wrapper-vision {
     height: 100%; }
@@ -899,7 +966,7 @@ input[type=submit]:hover {
   .article {
     float: left;
     width: 100%;
-    padding: 0;
+    padding: 5%;
     text-align: left;
     position: relative; }
     .article h3 {
@@ -914,7 +981,7 @@ input[type=submit]:hover {
     width: 100%;
     padding: 0;
     position: absolute;
-    opacity: 0.4; }
+    opacity: 0.35; }
 
   .square {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
