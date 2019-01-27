@@ -833,6 +833,7 @@ footer {
   -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
   padding-top: 10rem;
+  font-weight: 300;
 
   h2 {
     color: $secondary-color;
@@ -847,6 +848,10 @@ footer {
       color: $primary-color;
       font-weight: 900;
     }
+  }
+
+  a {
+    font-weight: 300;
   }
 }
 

@@ -755,7 +755,8 @@ footer {
   color: #FFFFFF;
   -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  font-weight: 300; }
   footer h2 {
     color: #03DCBB;
     text-transform: none; }
@@ -765,6 +766,8 @@ footer {
     footer .button a {
       color: #350462;
       font-weight: 900; }
+  footer a {
+    font-weight: 300; }
 
 .footer-content {
   padding-top: 2rem;
