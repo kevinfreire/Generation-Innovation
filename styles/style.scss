@@ -141,7 +141,7 @@ $mentor: url('../images/vision-mentorship.png');
 $community: url('../images/vision-community.png');
 
 /* Event Images */
-$event-feb-25: url('../images/event-feb25.jpg');
+$event-social-finance: url('../images/event-feb25.jpg');
 $event-coffee: url('../images/event-coffee.jpg');
 
 /**********************************
@@ -595,7 +595,7 @@ article {
   }
 
   .feb-25 {
-    background: $event-feb-25;
+    background: $event-social-finance;
     background-size: cover;
     background-position: center center;
   }
