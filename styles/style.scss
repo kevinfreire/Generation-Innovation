@@ -427,6 +427,7 @@ nav {
 
 .about-content {
   width: 50%;
+  text-align: justify;
 }
 
 .about-content h1 {
@@ -467,7 +468,6 @@ nav {
 }
 
 .events-wrapper {
-  // width: 90%;
   width: 90%;
   margin: 0 auto;
 }
@@ -518,10 +518,6 @@ article {
   background: white;
 }
 
-.carousel {
-  /*background: #EEE;*/
-}
-
 .carousel-cell {
   width: 49%;
   margin-right: 10px;
@@ -558,6 +554,7 @@ article {
 
 .event-content {
   padding: 0 0 4rem;
+  text-align: justify;
   
   h5 {
     color: $secondary-color;
@@ -726,7 +723,7 @@ div {
   height: 70vh;
   width: 50%;
   padding: 5vw 5vh;
-  text-align: left;
+  text-align: justify;
 
   h3 {
     color: $primary-color;
@@ -1078,6 +1075,16 @@ input[type=submit]:hover {
     width: 75%;
   }
 
+  .carousel-cell {
+    width: 100%;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+  }
+
+  .event-content {
+    padding: 0 0 1rem;
+  }
+
 }
 
 /*For Phones*/
@@ -1095,6 +1102,16 @@ input[type=submit]:hover {
 
   .event-header {
     width: 90%;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+  }
+
+  .event-content {
+    padding: 0 0 1rem;
   }
 
 }
