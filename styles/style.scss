@@ -485,11 +485,10 @@ nav {
 
 .events {
   position: relative;
-  z-index: -1;
   max-width: 100%;
   background: #350462;
   padding-bottom: 8rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   padding-top: 6rem;
 }
 
@@ -644,6 +643,10 @@ a.save-spot {
   }
 }
 
+.save-spot:hover, .save-spot:focus {
+  background: $secondary-color;
+}
+
 /**********************************
 /* THIS IS FOR THE SKEWED SECTION
 **********************************/
@@ -651,6 +654,7 @@ a.save-spot {
 .skewedSection, .skewedSection-events, .skewedSection-vision, .skewedSection-logo {
   position: relative;
   overflow: visible;
+  z-index: 10;
 }
 
 .skewedSection {

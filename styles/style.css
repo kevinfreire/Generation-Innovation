@@ -481,11 +481,10 @@ nav {
 **********************************/
 .events {
   position: relative;
-  z-index: -1;
   max-width: 100%;
   background: #350462;
   padding-bottom: 8rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   padding-top: 6rem; }
 
 .events-wrapper {
@@ -604,12 +603,16 @@ a.save-spot {
     font-size: 1.25rem;
     line-height: 1; }
 
+.save-spot:hover, .save-spot:focus {
+  background: #03DCBB; }
+
 /**********************************
 /* THIS IS FOR THE SKEWED SECTION
 **********************************/
 .skewedSection, .skewedSection-events, .skewedSection-vision, .skewedSection-logo {
   position: relative;
-  overflow: visible; }
+  overflow: visible;
+  z-index: 10; }
 
 .skewedSection {
   background-position: center;
